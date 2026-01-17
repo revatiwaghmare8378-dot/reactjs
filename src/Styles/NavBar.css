@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+/* 🌈 Modern Navbar Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f6fa;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  padding: 15px 40px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo Section */
+.navbar-logo .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.navbar-logo .logo span {
+  color: #ffeb3b;
+}
+
+/* Nav Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* 🪄 Hover underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0%;
+  background: #ffeb3b;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* 💡 Hover color */
+.nav-link:hover {
+  color: #ffeb3b;
+}
+
+/* Responsive Hamburger Menu */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* 📱 Responsive for Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 20px;
+    padding: 25px 0;
+    transform: translateY(-300px);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  /* 🧭 Show menu when checkbox checked */
+  .menu-toggle:checked ~ .navbar-links {
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
+/* 🧠 Active link (optional if using NavLink) */
+/* 🌟 Active link (same style for all) */
+.nav-link.active {
+  color: rgb(2, 252, 219); /* 🔴 Active color */
+  font-weight: 700;
+}
+
+/* ✨ Animated underline for active link */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background: #00ffcc;
+  border-radius: 2px;
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+/* 💫 Glow effect animation */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px #00ffcc, 0 0 10px rgb(2, 252, 219);
+  }
+  100% {
+    box-shadow: 0 0 15px #00ffcc, 0 0 30px rgb(2, 252, 219);
+  }
+}
+
+/* .custom {
+  color: red;
+} */

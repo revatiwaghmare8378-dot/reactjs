@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "tweyu",
+      "age": "23",
+      "email": "sdbfds@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstName": "ddab3",
+      "age": "3",
+      "email": "sdfsd@gmail.com"
+    },
+    {
+      "id": 3,
+      "firstName": "asdaghsd",
+      "age": "234",
+      "email": "adsd@gmail.com"
+    },
+    {
+      "id": 4,
+      "firstName": "tweyu",
+      "age": "23",
+      "email": "sdbfds@gmail.com"
+    },
+    {
+      "id": 5,
+      "firstName": "ddab3",
+      "age": "3",
+      "email": "sdfsd@gmail.com"
+    },
+    {
+      "id": 6,
+      "firstName": "asdaghsd",
+      "age": "234",
+      "email": "adsd@gmail.com"
+    },
+    {
+      "id": 7,
+      "firstName": "tweyu",
+      "age": "23",
+      "email": "sdbfds@gmail.com"
+    },
+    {
+      "id": 8,
+      "firstName": "ddab3",
+      "age": "3",
+      "email": "sdfsd@gmail.com"
+    },
+    {
+      "id": 9,
+      "firstName": "asdaghsd",
+      "age": "234",
+      "email": "adsd@gmail.com"
+    }
+  ]
+}
