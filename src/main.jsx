@@ -63,7 +63,7 @@ createRoot(document.getElementById("root")).render(
     */}
       <UserRoutes />
       <hr />
-      {/* <ApiUsingLoader />
+      <ApiUsingLoader />
       <hr />
       <APIMethods />
       <hr />
@@ -83,15 +83,15 @@ createRoot(document.getElementById("root")).render(
       <hr />
       <NavBar />
       <hr />
-      <ReactRoute /> */}
+      <ReactRoute />
     </BrowserRouter>
     <hr />
     <CustomHooks />
     <hr />
     <ContextApi />
     <hr />
-    {/* <Fragment />
-    <hr /> */}
+    <Fragment />
+    <hr />
     <UseIdHook />
     <hr />
     <UseActionStateHook />
