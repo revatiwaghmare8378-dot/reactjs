@@ -51,6 +51,7 @@ import TailwindSetup from "./Screens/TailwindSetup.jsx";
 import APIMethods from "./Screens/APIMethods.jsx";
 import ApiUsingLoader from "./Screens/ApiUsingLoader.jsx";
 import UserRoutes from "./Screens/UserRoutes.jsx";
+import ValidationUseActionState from "./Screens/ValidationUseActionState.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -61,9 +62,11 @@ createRoot(document.getElementById("root")).render(
       - Enables React Router to listen to URL changes.
       - Keeps UI in sync with the browser’s address bar.
     */}
+      <ValidationUseActionState />
+      <hr />
       <UserRoutes />
       <hr />
-      <ApiUsingLoader />
+      {/* <ApiUsingLoader />
       <hr />
       <APIMethods />
       <hr />
@@ -83,15 +86,15 @@ createRoot(document.getElementById("root")).render(
       <hr />
       <NavBar />
       <hr />
-      <ReactRoute />
+      <ReactRoute /> */}
     </BrowserRouter>
     <hr />
     <CustomHooks />
     <hr />
     <ContextApi />
     <hr />
-    <Fragment />
-    <hr />
+    {/* <Fragment />
+    <hr /> */}
     <UseIdHook />
     <hr />
     <UseActionStateHook />
@@ -156,5 +159,5 @@ createRoot(document.getElementById("root")).render(
     <hr />
     <App />
     <hr />
-  </StrictMode>
+  </StrictMode>,
 );
