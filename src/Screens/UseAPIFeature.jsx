@@ -4,7 +4,7 @@ export default function UseAPIFeature(params) {
   const fetchData = async () =>
     fetch("https://dummyjson.com/user").then((res) => res.json());
 
-  console.log("fetchData", fetchData());
+  //   console.log("fetchData", fetchData());
 
   const userResource = fetchData();
 
@@ -19,9 +19,9 @@ export default function UseAPIFeature(params) {
 }
 
 const Users = ({ data }) => {
-  console.log("data", data);
+  //   console.log("data", data);
   const userData = use(data);
-  console.log("userData", userData.users);
+  //   console.log("userData", userData.users);
   return (
     <div>
       <h2>Users Data</h2>
