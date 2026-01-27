@@ -16,7 +16,7 @@ export default function APIMethods(params) {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setUsersData(data.users || []); // ✅ Safe access
       })
       .catch((error) => {

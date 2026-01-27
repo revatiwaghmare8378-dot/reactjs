@@ -17,7 +17,7 @@ export default function ValidationUseActionState() {
     if (
       !password ||
       !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
-        password
+        password,
       )
     ) {
       errors.password =
@@ -46,46 +46,47 @@ export default function ValidationUseActionState() {
     errors: {},
     message: "",
   });
-  console.log("STATE", state);
+  // console.log("STATE", state);
 
   return (
-    <div style={{ maxWidth: "400px", margin: "40px auto" }}>
+    <div>
       <h1>Validation with useActionState</h1>
+      <div style={{ maxWidth: "400px", margin: "40px auto" }}>
+        <form action={formActionFn}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter Name"
+            style={inputStyle}
+          />
+          {state.errors?.name && <p style={errorStyle}>{state.errors.name}</p>}
 
-      <form action={formActionFn}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter Name"
-          style={inputStyle}
-        />
-        {state.errors?.name && <p style={errorStyle}>{state.errors.name}</p>}
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            style={inputStyle}
+          />
+          {state.errors?.password && (
+            <p style={errorStyle}>{state.errors.password}</p>
+          )}
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Enter Password"
-          style={inputStyle}
-        />
-        {state.errors?.password && (
-          <p style={errorStyle}>{state.errors.password}</p>
+          <button type="submit" style={btnStyle}>
+            Submit
+          </button>
+
+          {state.success && (
+            <p style={{ color: "green", marginTop: "10px" }}>{state.message}</p>
+          )}
+        </form>
+        {state.name && (
+          <p>
+            <strong>Name:</strong> {state?.name}
+            <br />
+            <strong>Password:</strong> {state?.password}
+          </p>
         )}
-
-        <button type="submit" style={btnStyle}>
-          Submit
-        </button>
-
-        {state.success && (
-          <p style={{ color: "green", marginTop: "10px" }}>{state.message}</p>
-        )}
-      </form>
-      {state.name && (
-        <p>
-          <strong>Name:</strong> {state?.name}
-          <br />
-          <strong>Password:</strong> {state?.password}
-        </p>
-      )}
+      </div>
     </div>
   );
 }

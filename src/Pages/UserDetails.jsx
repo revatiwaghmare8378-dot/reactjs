@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 
 export default function UserDetails() {
   const paramsData = useParams();
-  console.log("User ID from URL:", paramsData);
+  // console.log("User ID from URL:", paramsData);
   return (
     <div>
       <h1>User Details</h1>

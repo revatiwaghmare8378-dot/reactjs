@@ -12,7 +12,7 @@ export default function ApiUsingLoader(params) {
     const response = await fetch("http://localhost:3000/users");
 
     const data = await response.json();
-    console.log("Loader Data:", data);
+    // console.log("Loader Data:", data);
     setUserData(data);
     setLoading(false);
   };

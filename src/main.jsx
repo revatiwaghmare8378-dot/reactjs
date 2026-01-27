@@ -52,9 +52,18 @@ import APIMethods from "./Screens/APIMethods.jsx";
 import ApiUsingLoader from "./Screens/ApiUsingLoader.jsx";
 import UserRoutes from "./Screens/UserRoutes.jsx";
 import ValidationUseActionState from "./Screens/ValidationUseActionState.jsx";
+import UseReducerHook from "./Hooks/UseReducerhook.jsx";
+import LazyLoading from "./Screens/LazyLoading.jsx";
+import UseAPIFeature from "./Screens/UseAPIFeature.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <UseAPIFeature />
+    <hr />
+    <LazyLoading />
+    <hr />
+    <UseReducerHook />
+    <hr />
     <BrowserRouter>
       {/* 
       🌐 BrowserRouter:
