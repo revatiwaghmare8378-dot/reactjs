@@ -42,5 +42,15 @@
       "age": "3",
       "email": "sdfsd@gmail.com"
     }
+  ],
+  "skills": [
+    {
+      "id": 1769624793111,
+      "name": "React"
+    },
+    {
+      "id": 1769624813820,
+      "name": "Java"
+    }
   ]
 }

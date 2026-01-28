@@ -55,9 +55,12 @@ import ValidationUseActionState from "./Screens/ValidationUseActionState.jsx";
 import UseReducerHook from "./Hooks/UseReducerhook.jsx";
 import LazyLoading from "./Screens/LazyLoading.jsx";
 import UseAPIFeature from "./Screens/UseAPIFeature.jsx";
+import UseOptimisticHook from "./Hooks/UseOptimisticHook.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <UseOptimisticHook />
+    <hr />
     <UseAPIFeature />
     <hr />
     <LazyLoading />
