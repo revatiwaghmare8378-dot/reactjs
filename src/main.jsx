@@ -56,9 +56,15 @@ import UseReducerHook from "./Hooks/UseReducerhook.jsx";
 import LazyLoading from "./Screens/LazyLoading.jsx";
 import UseAPIFeature from "./Screens/UseAPIFeature.jsx";
 import UseOptimisticHook from "./Hooks/UseOptimisticHook.jsx";
+import ActivityFeature from "./Screens/ActivityFeature.jsx";
+import UseEffectEvent from "./Hooks/UseEffectEvent.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <UseEffectEvent />
+    <hr />
+    <ActivityFeature />
+    <hr />
     <UseOptimisticHook />
     <hr />
     <UseAPIFeature />
